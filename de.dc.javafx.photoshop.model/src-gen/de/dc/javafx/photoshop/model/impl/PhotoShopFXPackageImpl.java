@@ -213,7 +213,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_Rotate() {
+	public EAttribute getNodeFX_Opacity() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -223,7 +223,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_ScaleX() {
+	public EAttribute getNodeFX_Style() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -233,7 +233,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_ScaleY() {
+	public EAttribute getNodeFX_StyleClass() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -243,7 +243,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_ScaleZ() {
+	public EAttribute getNodeFX_StrokeWidth() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -253,7 +253,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_TranslateX() {
+	public EAttribute getNodeFX_Rotate() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -263,7 +263,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_TranslateY() {
+	public EAttribute getNodeFX_ScaleX() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(6);
 	}
 
@@ -273,7 +273,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_TranslateZ() {
+	public EAttribute getNodeFX_ScaleY() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(7);
 	}
 
@@ -283,7 +283,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_Opacity() {
+	public EAttribute getNodeFX_ScaleZ() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(8);
 	}
 
@@ -293,7 +293,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_Style() {
+	public EAttribute getNodeFX_TranslateX() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(9);
 	}
 
@@ -303,7 +303,7 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_StyleClass() {
+	public EAttribute getNodeFX_TranslateY() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(10);
 	}
 
@@ -313,8 +313,18 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
-	public EAttribute getNodeFX_Visible() {
+	public EAttribute getNodeFX_TranslateZ() {
 		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getNodeFX_Visible() {
+		return (EAttribute) nodeFXEClass.getEStructuralFeatures().get(12);
 	}
 
 	/**
@@ -562,6 +572,10 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 
 		nodeFXEClass = createEClass(NODE_FX);
 		createEAttribute(nodeFXEClass, NODE_FX__NAME);
+		createEAttribute(nodeFXEClass, NODE_FX__OPACITY);
+		createEAttribute(nodeFXEClass, NODE_FX__STYLE);
+		createEAttribute(nodeFXEClass, NODE_FX__STYLE_CLASS);
+		createEAttribute(nodeFXEClass, NODE_FX__STROKE_WIDTH);
 		createEAttribute(nodeFXEClass, NODE_FX__ROTATE);
 		createEAttribute(nodeFXEClass, NODE_FX__SCALE_X);
 		createEAttribute(nodeFXEClass, NODE_FX__SCALE_Y);
@@ -569,9 +583,6 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 		createEAttribute(nodeFXEClass, NODE_FX__TRANSLATE_X);
 		createEAttribute(nodeFXEClass, NODE_FX__TRANSLATE_Y);
 		createEAttribute(nodeFXEClass, NODE_FX__TRANSLATE_Z);
-		createEAttribute(nodeFXEClass, NODE_FX__OPACITY);
-		createEAttribute(nodeFXEClass, NODE_FX__STYLE);
-		createEAttribute(nodeFXEClass, NODE_FX__STYLE_CLASS);
 		createEAttribute(nodeFXEClass, NODE_FX__VISIBLE);
 
 		pointFXEClass = createEClass(POINT_FX);
@@ -655,6 +666,18 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 		initEClass(nodeFXEClass, NodeFX.class, "NodeFX", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getNodeFX_Name(), theEcorePackage.getEString(), "name", null, 0, 1, NodeFX.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getNodeFX_Opacity(), theEcorePackage.getEDouble(), "opacity", "1.0", 0, 1, NodeFX.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getNodeFX_Style(), theEcorePackage.getEString(), "style", null, 0, 1, NodeFX.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getNodeFX_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, 1, NodeFX.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEAttribute(getNodeFX_StrokeWidth(), theEcorePackage.getEDouble(), "strokeWidth", "1.0", 0, 1, NodeFX.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 		initEAttribute(getNodeFX_Rotate(), theEcorePackage.getEDouble(), "rotate", null, 0, 1, NodeFX.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
@@ -674,15 +697,6 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEAttribute(getNodeFX_TranslateZ(), theEcorePackage.getEDouble(), "translateZ", null, 0, 1, NodeFX.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getNodeFX_Opacity(), theEcorePackage.getEDouble(), "opacity", "1.0", 0, 1, NodeFX.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getNodeFX_Style(), theEcorePackage.getEString(), "style", null, 0, 1, NodeFX.class,
-				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
-				IS_ORDERED);
-		initEAttribute(getNodeFX_StyleClass(), theEcorePackage.getEString(), "styleClass", null, 0, 1, NodeFX.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 		initEAttribute(getNodeFX_Visible(), theEcorePackage.getEBoolean(), "visible", "true", 0, 1, NodeFX.class,

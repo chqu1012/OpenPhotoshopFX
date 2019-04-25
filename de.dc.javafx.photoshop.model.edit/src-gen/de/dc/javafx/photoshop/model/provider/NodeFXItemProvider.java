@@ -54,6 +54,10 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
+			addOpacityPropertyDescriptor(object);
+			addStylePropertyDescriptor(object);
+			addStyleClassPropertyDescriptor(object);
+			addStrokeWidthPropertyDescriptor(object);
 			addRotatePropertyDescriptor(object);
 			addScaleXPropertyDescriptor(object);
 			addScaleYPropertyDescriptor(object);
@@ -61,9 +65,6 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 			addTranslateXPropertyDescriptor(object);
 			addTranslateYPropertyDescriptor(object);
 			addTranslateZPropertyDescriptor(object);
-			addOpacityPropertyDescriptor(object);
-			addStylePropertyDescriptor(object);
-			addStyleClassPropertyDescriptor(object);
 			addVisiblePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
@@ -81,7 +82,7 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 						getResourceLocator(), getString("_UI_NodeFX_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_name_feature", "_UI_NodeFX_type"),
 						PhotoShopFXPackage.Literals.NODE_FX__NAME, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -205,7 +206,7 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_opacity_feature",
 								"_UI_NodeFX_type"),
 						PhotoShopFXPackage.Literals.NODE_FX__OPACITY, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -220,7 +221,7 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 						getResourceLocator(), getString("_UI_NodeFX_style_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_style_feature", "_UI_NodeFX_type"),
 						PhotoShopFXPackage.Literals.NODE_FX__STYLE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -236,7 +237,23 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_styleClass_feature",
 								"_UI_NodeFX_type"),
 						PhotoShopFXPackage.Literals.NODE_FX__STYLE_CLASS, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Stroke Width feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStrokeWidthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NodeFX_strokeWidth_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_strokeWidth_feature",
+								"_UI_NodeFX_type"),
+						PhotoShopFXPackage.Literals.NODE_FX__STROKE_WIDTH, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -291,6 +308,10 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 
 		switch (notification.getFeatureID(NodeFX.class)) {
 		case PhotoShopFXPackage.NODE_FX__NAME:
+		case PhotoShopFXPackage.NODE_FX__OPACITY:
+		case PhotoShopFXPackage.NODE_FX__STYLE:
+		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
+		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 		case PhotoShopFXPackage.NODE_FX__SCALE_X:
 		case PhotoShopFXPackage.NODE_FX__SCALE_Y:
@@ -298,9 +319,6 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 		case PhotoShopFXPackage.NODE_FX__TRANSLATE_X:
 		case PhotoShopFXPackage.NODE_FX__TRANSLATE_Y:
 		case PhotoShopFXPackage.NODE_FX__TRANSLATE_Z:
-		case PhotoShopFXPackage.NODE_FX__OPACITY:
-		case PhotoShopFXPackage.NODE_FX__STYLE:
-		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
 		case PhotoShopFXPackage.NODE_FX__VISIBLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

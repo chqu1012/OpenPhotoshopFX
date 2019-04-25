@@ -21,6 +21,10 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getName <em>Name</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getOpacity <em>Opacity</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStyle <em>Style</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStyleClass <em>Style Class</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStrokeWidth <em>Stroke Width</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getRotate <em>Rotate</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getScaleX <em>Scale X</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getScaleY <em>Scale Y</em>}</li>
@@ -28,9 +32,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getTranslateX <em>Translate X</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getTranslateY <em>Translate Y</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getTranslateZ <em>Translate Z</em>}</li>
- *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getOpacity <em>Opacity</em>}</li>
- *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStyle <em>Style</em>}</li>
- *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#isVisible <em>Visible</em>}</li>
  * </ul>
  *
@@ -56,6 +57,86 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected String name = NAME_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getOpacity() <em>Opacity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOpacity()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double OPACITY_EDEFAULT = 1.0;
+
+	/**
+	 * The cached value of the '{@link #getOpacity() <em>Opacity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getOpacity()
+	 * @generated
+	 * @ordered
+	 */
+	protected double opacity = OPACITY_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STYLE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyle()
+	 * @generated
+	 * @ordered
+	 */
+	protected String style = STYLE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyleClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STYLE_CLASS_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStyleClass()
+	 * @generated
+	 * @ordered
+	 */
+	protected String styleClass = STYLE_CLASS_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStrokeWidth() <em>Stroke Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStrokeWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double STROKE_WIDTH_EDEFAULT = 1.0;
+
+	/**
+	 * The cached value of the '{@link #getStrokeWidth() <em>Stroke Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStrokeWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double strokeWidth = STROKE_WIDTH_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRotate() <em>Rotate</em>}' attribute.
@@ -198,66 +279,6 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 	protected double translateZ = TRANSLATE_Z_EDEFAULT;
 
 	/**
-	 * The default value of the '{@link #getOpacity() <em>Opacity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOpacity()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final double OPACITY_EDEFAULT = 1.0;
-
-	/**
-	 * The cached value of the '{@link #getOpacity() <em>Opacity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getOpacity()
-	 * @generated
-	 * @ordered
-	 */
-	protected double opacity = OPACITY_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyle() <em>Style</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getStyle() <em>Style</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyle()
-	 * @generated
-	 * @ordered
-	 */
-	protected String style = STYLE_EDEFAULT;
-
-	/**
-	 * The default value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected static final String STYLE_CLASS_EDEFAULT = null;
-
-	/**
-	 * The cached value of the '{@link #getStyleClass() <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see #getStyleClass()
-	 * @generated
-	 * @ordered
-	 */
-	protected String styleClass = STYLE_CLASS_EDEFAULT;
-
-	/**
 	 * The default value of the '{@link #isVisible() <em>Visible</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -317,6 +338,101 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		name = newName;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__NAME, oldName, name));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getOpacity() {
+		return opacity;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setOpacity(double newOpacity) {
+		double oldOpacity = opacity;
+		opacity = newOpacity;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__OPACITY, oldOpacity,
+					opacity));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getStyle() {
+		return style;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStyle(String newStyle) {
+		String oldStyle = style;
+		style = newStyle;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__STYLE, oldStyle, style));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String getStyleClass() {
+		return styleClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStyleClass(String newStyleClass) {
+		String oldStyleClass = styleClass;
+		styleClass = newStyleClass;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__STYLE_CLASS,
+					oldStyleClass, styleClass));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getStrokeWidth() {
+		return strokeWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStrokeWidth(double newStrokeWidth) {
+		double oldStrokeWidth = strokeWidth;
+		strokeWidth = newStrokeWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__STROKE_WIDTH,
+					oldStrokeWidth, strokeWidth));
 	}
 
 	/**
@@ -493,77 +609,6 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
-	public double getOpacity() {
-		return opacity;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setOpacity(double newOpacity) {
-		double oldOpacity = opacity;
-		opacity = newOpacity;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__OPACITY, oldOpacity,
-					opacity));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getStyle() {
-		return style;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyle(String newStyle) {
-		String oldStyle = style;
-		style = newStyle;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__STYLE, oldStyle, style));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public String getStyleClass() {
-		return styleClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public void setStyleClass(String newStyleClass) {
-		String oldStyleClass = styleClass;
-		styleClass = newStyleClass;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__STYLE_CLASS,
-					oldStyleClass, styleClass));
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
 	public boolean isVisible() {
 		return visible;
 	}
@@ -592,6 +637,14 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case PhotoShopFXPackage.NODE_FX__NAME:
 			return getName();
+		case PhotoShopFXPackage.NODE_FX__OPACITY:
+			return getOpacity();
+		case PhotoShopFXPackage.NODE_FX__STYLE:
+			return getStyle();
+		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
+			return getStyleClass();
+		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
+			return getStrokeWidth();
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			return getRotate();
 		case PhotoShopFXPackage.NODE_FX__SCALE_X:
@@ -606,12 +659,6 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 			return getTranslateY();
 		case PhotoShopFXPackage.NODE_FX__TRANSLATE_Z:
 			return getTranslateZ();
-		case PhotoShopFXPackage.NODE_FX__OPACITY:
-			return getOpacity();
-		case PhotoShopFXPackage.NODE_FX__STYLE:
-			return getStyle();
-		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
-			return getStyleClass();
 		case PhotoShopFXPackage.NODE_FX__VISIBLE:
 			return isVisible();
 		}
@@ -628,6 +675,18 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case PhotoShopFXPackage.NODE_FX__NAME:
 			setName((String) newValue);
+			return;
+		case PhotoShopFXPackage.NODE_FX__OPACITY:
+			setOpacity((Double) newValue);
+			return;
+		case PhotoShopFXPackage.NODE_FX__STYLE:
+			setStyle((String) newValue);
+			return;
+		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
+			setStyleClass((String) newValue);
+			return;
+		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
+			setStrokeWidth((Double) newValue);
 			return;
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			setRotate((Double) newValue);
@@ -650,15 +709,6 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		case PhotoShopFXPackage.NODE_FX__TRANSLATE_Z:
 			setTranslateZ((Double) newValue);
 			return;
-		case PhotoShopFXPackage.NODE_FX__OPACITY:
-			setOpacity((Double) newValue);
-			return;
-		case PhotoShopFXPackage.NODE_FX__STYLE:
-			setStyle((String) newValue);
-			return;
-		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
-			setStyleClass((String) newValue);
-			return;
 		case PhotoShopFXPackage.NODE_FX__VISIBLE:
 			setVisible((Boolean) newValue);
 			return;
@@ -676,6 +726,18 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case PhotoShopFXPackage.NODE_FX__NAME:
 			setName(NAME_EDEFAULT);
+			return;
+		case PhotoShopFXPackage.NODE_FX__OPACITY:
+			setOpacity(OPACITY_EDEFAULT);
+			return;
+		case PhotoShopFXPackage.NODE_FX__STYLE:
+			setStyle(STYLE_EDEFAULT);
+			return;
+		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
+			setStyleClass(STYLE_CLASS_EDEFAULT);
+			return;
+		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
+			setStrokeWidth(STROKE_WIDTH_EDEFAULT);
 			return;
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			setRotate(ROTATE_EDEFAULT);
@@ -698,15 +760,6 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		case PhotoShopFXPackage.NODE_FX__TRANSLATE_Z:
 			setTranslateZ(TRANSLATE_Z_EDEFAULT);
 			return;
-		case PhotoShopFXPackage.NODE_FX__OPACITY:
-			setOpacity(OPACITY_EDEFAULT);
-			return;
-		case PhotoShopFXPackage.NODE_FX__STYLE:
-			setStyle(STYLE_EDEFAULT);
-			return;
-		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
-			setStyleClass(STYLE_CLASS_EDEFAULT);
-			return;
 		case PhotoShopFXPackage.NODE_FX__VISIBLE:
 			setVisible(VISIBLE_EDEFAULT);
 			return;
@@ -724,6 +777,14 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		switch (featureID) {
 		case PhotoShopFXPackage.NODE_FX__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+		case PhotoShopFXPackage.NODE_FX__OPACITY:
+			return opacity != OPACITY_EDEFAULT;
+		case PhotoShopFXPackage.NODE_FX__STYLE:
+			return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
+		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
+			return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
+		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
+			return strokeWidth != STROKE_WIDTH_EDEFAULT;
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			return rotate != ROTATE_EDEFAULT;
 		case PhotoShopFXPackage.NODE_FX__SCALE_X:
@@ -738,12 +799,6 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 			return translateY != TRANSLATE_Y_EDEFAULT;
 		case PhotoShopFXPackage.NODE_FX__TRANSLATE_Z:
 			return translateZ != TRANSLATE_Z_EDEFAULT;
-		case PhotoShopFXPackage.NODE_FX__OPACITY:
-			return opacity != OPACITY_EDEFAULT;
-		case PhotoShopFXPackage.NODE_FX__STYLE:
-			return STYLE_EDEFAULT == null ? style != null : !STYLE_EDEFAULT.equals(style);
-		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
-			return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		case PhotoShopFXPackage.NODE_FX__VISIBLE:
 			return visible != VISIBLE_EDEFAULT;
 		}
@@ -763,6 +818,14 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
+		result.append(", opacity: ");
+		result.append(opacity);
+		result.append(", style: ");
+		result.append(style);
+		result.append(", styleClass: ");
+		result.append(styleClass);
+		result.append(", strokeWidth: ");
+		result.append(strokeWidth);
 		result.append(", rotate: ");
 		result.append(rotate);
 		result.append(", scaleX: ");
@@ -777,12 +840,6 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		result.append(translateY);
 		result.append(", translateZ: ");
 		result.append(translateZ);
-		result.append(", opacity: ");
-		result.append(opacity);
-		result.append(", style: ");
-		result.append(style);
-		result.append(", styleClass: ");
-		result.append(styleClass);
 		result.append(", visible: ");
 		result.append(visible);
 		result.append(')');

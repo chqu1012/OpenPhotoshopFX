@@ -14,7 +14,6 @@ import de.dc.javafx.photoshop.model.NodeFactory;
 import de.dc.javafx.photoshop.model.PhotoShopFX;
 import javafx.embed.swt.FXCanvas;
 import javafx.scene.Node;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 

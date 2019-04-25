@@ -7,6 +7,7 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Shape;
 
 public class NodeFactory extends PhotoShopFXSwitch<Node> {
 
@@ -21,34 +22,54 @@ public class NodeFactory extends PhotoShopFXSwitch<Node> {
 	public Node caseLineFX(LineFX object) {
 		PointFX start = object.getPosition();
 		PointFX end = object.getEndPosition();
-		return new Line(start.getX(), start.getY(), end.getX(), end.getY());
+		Line node = new Line(start.getX(), start.getY(), end.getX(), end.getY());
+		initNode(node, object);
+		return node;
 	}
 
 	@Override
 	public Node caseCircleFX(CircleFX object) {
 		PointFX pos = object.getPosition();
-		return new Circle(pos.getX(), pos.getY(), object.getRadius());
+		Circle node = new Circle(pos.getX(), pos.getY(), object.getRadius());
+		initNode(node, object);
+		return node;
 	}
 
 	@Override
 	public Node caseRectangleFX(RectangleFX object) {
-		Rectangle rectangle = new Rectangle();
-		rectangle.setX(object.getPosition().getX());
-		rectangle.setY(object.getPosition().getY());
-		rectangle.setWidth(object.getWidth());
-		rectangle.setHeight(object.getHeight());
-		rectangle.setArcWidth(object.getArcWidth());
-		rectangle.setArcHeight(object.getArcHeight());  
-		return rectangle;
+		Rectangle node = new Rectangle();
+		node.setX(object.getPosition().getX());
+		node.setY(object.getPosition().getY());
+		node.setWidth(object.getWidth());
+		node.setHeight(object.getHeight());
+		node.setArcWidth(object.getArcWidth());
+		node.setArcHeight(object.getArcHeight());  
+		initNode(node, object);
+		return node;
 	}
 	
 	@Override
 	public Node casePolygonFX(PolygonFX object) {
-		Polygon polygon = new Polygon();  
+		Polygon node = new Polygon();  
 		object.getPoints().stream().forEach(p->{
-			 polygon.getPoints().add(p.getX());
-			 polygon.getPoints().add(p.getY());
+			node.getPoints().add(p.getX());
+			node.getPoints().add(p.getY());
 		});
-		return polygon;
+		
+		initNode(node, object);
+		return node;
+	}
+	
+	private void initNode(Shape node, NodeFX fx) {
+//		  @GenModel(propertyCategory="Details")
+//			double opacity = '1.0'
+//		  @GenModel(propertyCategory="Details")
+//			String style
+//		  @GenModel(propertyCategory="Details")
+//			String styleClass
+//		  @GenModel(propertyCategory="Details")
+//			double strokeWidth
+		
+		node.setStrokeWidth(fx.getStrokeWidth());
 	}
 }

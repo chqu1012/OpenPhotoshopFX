@@ -14,6 +14,10 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getName <em>Name</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getOpacity <em>Opacity</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStyle <em>Style</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStyleClass <em>Style Class</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStrokeWidth <em>Stroke Width</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getRotate <em>Rotate</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getScaleX <em>Scale X</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getScaleY <em>Scale Y</em>}</li>
@@ -21,9 +25,6 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getTranslateX <em>Translate X</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getTranslateY <em>Translate Y</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getTranslateZ <em>Translate Z</em>}</li>
- *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getOpacity <em>Opacity</em>}</li>
- *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStyle <em>Style</em>}</li>
- *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#isVisible <em>Visible</em>}</li>
  * </ul>
  *
@@ -40,6 +41,7 @@ public interface NodeFX extends EObject {
 	 * @see #setName(String)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_Name()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	String getName();
@@ -53,6 +55,100 @@ public interface NodeFX extends EObject {
 	 * @generated
 	 */
 	void setName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Opacity</b></em>' attribute.
+	 * The default value is <code>"1.0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Opacity</em>' attribute.
+	 * @see #setOpacity(double)
+	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_Opacity()
+	 * @model default="1.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
+	 * @generated
+	 */
+	double getOpacity();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getOpacity <em>Opacity</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Opacity</em>' attribute.
+	 * @see #getOpacity()
+	 * @generated
+	 */
+	void setOpacity(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Style</em>' attribute.
+	 * @see #setStyle(String)
+	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_Style()
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
+	 * @generated
+	 */
+	String getStyle();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getStyle <em>Style</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Style</em>' attribute.
+	 * @see #getStyle()
+	 * @generated
+	 */
+	void setStyle(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Style Class</em>' attribute.
+	 * @see #setStyleClass(String)
+	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_StyleClass()
+	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
+	 * @generated
+	 */
+	String getStyleClass();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getStyleClass <em>Style Class</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Style Class</em>' attribute.
+	 * @see #getStyleClass()
+	 * @generated
+	 */
+	void setStyleClass(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Stroke Width</b></em>' attribute.
+	 * The default value is <code>"1.0"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Stroke Width</em>' attribute.
+	 * @see #setStrokeWidth(double)
+	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_StrokeWidth()
+	 * @model default="1.0" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
+	 * @generated
+	 */
+	double getStrokeWidth();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getStrokeWidth <em>Stroke Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Stroke Width</em>' attribute.
+	 * @see #getStrokeWidth()
+	 * @generated
+	 */
+	void setStrokeWidth(double value);
 
 	/**
 	 * Returns the value of the '<em><b>Rotate</b></em>' attribute.
@@ -207,73 +303,6 @@ public interface NodeFX extends EObject {
 	 * @generated
 	 */
 	void setTranslateZ(double value);
-
-	/**
-	 * Returns the value of the '<em><b>Opacity</b></em>' attribute.
-	 * The default value is <code>"1.0"</code>.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Opacity</em>' attribute.
-	 * @see #setOpacity(double)
-	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_Opacity()
-	 * @model default="1.0" unique="false"
-	 * @generated
-	 */
-	double getOpacity();
-
-	/**
-	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getOpacity <em>Opacity</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Opacity</em>' attribute.
-	 * @see #getOpacity()
-	 * @generated
-	 */
-	void setOpacity(double value);
-
-	/**
-	 * Returns the value of the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style</em>' attribute.
-	 * @see #setStyle(String)
-	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_Style()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getStyle();
-
-	/**
-	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getStyle <em>Style</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style</em>' attribute.
-	 * @see #getStyle()
-	 * @generated
-	 */
-	void setStyle(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Style Class</em>' attribute.
-	 * @see #setStyleClass(String)
-	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_StyleClass()
-	 * @model unique="false"
-	 * @generated
-	 */
-	String getStyleClass();
-
-	/**
-	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getStyleClass <em>Style Class</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Style Class</em>' attribute.
-	 * @see #getStyleClass()
-	 * @generated
-	 */
-	void setStyleClass(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Visible</b></em>' attribute.

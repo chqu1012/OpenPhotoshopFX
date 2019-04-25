@@ -25,7 +25,16 @@ class PhotoShopFX{
 }
 
 abstract class NodeFX{
+  @GenModel(propertyCategory="Details")
 	String name
+  @GenModel(propertyCategory="Details")
+	double opacity = '1.0'
+  @GenModel(propertyCategory="Details")
+	String style
+  @GenModel(propertyCategory="Details")
+	String styleClass
+  @GenModel(propertyCategory="Details")
+	double strokeWidth = '1.0'
 	double rotate
 	double scaleX
 	double scaleY
@@ -33,9 +42,6 @@ abstract class NodeFX{
 	double translateX
 	double translateY
 	double translateZ
-	double opacity = '1.0'
-	String style
-	String styleClass
 	boolean visible = 'true'
 }
 

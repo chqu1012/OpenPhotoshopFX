@@ -114,76 +114,13 @@ public interface PhotoShopFXPackage extends EPackage {
 	int NODE_FX__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FX__ROTATE = 1;
-
-	/**
-	 * The feature id for the '<em><b>Scale X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FX__SCALE_X = 2;
-
-	/**
-	 * The feature id for the '<em><b>Scale Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FX__SCALE_Y = 3;
-
-	/**
-	 * The feature id for the '<em><b>Scale Z</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FX__SCALE_Z = 4;
-
-	/**
-	 * The feature id for the '<em><b>Translate X</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FX__TRANSLATE_X = 5;
-
-	/**
-	 * The feature id for the '<em><b>Translate Y</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FX__TRANSLATE_Y = 6;
-
-	/**
-	 * The feature id for the '<em><b>Translate Z</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int NODE_FX__TRANSLATE_Z = 7;
-
-	/**
 	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__OPACITY = 8;
+	int NODE_FX__OPACITY = 1;
 
 	/**
 	 * The feature id for the '<em><b>Style</b></em>' attribute.
@@ -192,7 +129,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__STYLE = 9;
+	int NODE_FX__STYLE = 2;
 
 	/**
 	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
@@ -201,7 +138,79 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__STYLE_CLASS = 10;
+	int NODE_FX__STYLE_CLASS = 3;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__STROKE_WIDTH = 4;
+
+	/**
+	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__ROTATE = 5;
+
+	/**
+	 * The feature id for the '<em><b>Scale X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__SCALE_X = 6;
+
+	/**
+	 * The feature id for the '<em><b>Scale Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__SCALE_Y = 7;
+
+	/**
+	 * The feature id for the '<em><b>Scale Z</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__SCALE_Z = 8;
+
+	/**
+	 * The feature id for the '<em><b>Translate X</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__TRANSLATE_X = 9;
+
+	/**
+	 * The feature id for the '<em><b>Translate Y</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__TRANSLATE_Y = 10;
+
+	/**
+	 * The feature id for the '<em><b>Translate Z</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__TRANSLATE_Z = 11;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -210,7 +219,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__VISIBLE = 11;
+	int NODE_FX__VISIBLE = 12;
 
 	/**
 	 * The number of structural features of the '<em>Node FX</em>' class.
@@ -219,7 +228,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX_FEATURE_COUNT = 12;
+	int NODE_FX_FEATURE_COUNT = 13;
 
 	/**
 	 * The number of operations of the '<em>Node FX</em>' class.
@@ -248,6 +257,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int POINT_FX__NAME = NODE_FX__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_FX__OPACITY = NODE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_FX__STYLE = NODE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_FX__STYLE_CLASS = NODE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_FX__STROKE_WIDTH = NODE_FX__STROKE_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
@@ -311,33 +356,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int POINT_FX__TRANSLATE_Z = NODE_FX__TRANSLATE_Z;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_FX__OPACITY = NODE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_FX__STYLE = NODE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POINT_FX__STYLE_CLASS = NODE_FX__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -404,6 +422,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	int SHAPE_FX__NAME = NODE_FX__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_FX__OPACITY = NODE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_FX__STYLE = NODE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_FX__STYLE_CLASS = NODE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_FX__STROKE_WIDTH = NODE_FX__STROKE_WIDTH;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -467,33 +521,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	int SHAPE_FX__TRANSLATE_Z = NODE_FX__TRANSLATE_Z;
 
 	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHAPE_FX__OPACITY = NODE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHAPE_FX__STYLE = NODE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int SHAPE_FX__STYLE_CLASS = NODE_FX__STYLE_CLASS;
-
-	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -547,6 +574,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINE_FX__NAME = SHAPE_FX__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_FX__OPACITY = SHAPE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_FX__STYLE = SHAPE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
 
 	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
@@ -610,33 +673,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINE_FX__TRANSLATE_Z = SHAPE_FX__TRANSLATE_Z;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_FX__OPACITY = SHAPE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_FX__STYLE = SHAPE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int LINE_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -703,6 +739,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	int RECTANGLE_FX__NAME = SHAPE_FX__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECTANGLE_FX__OPACITY = SHAPE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECTANGLE_FX__STYLE = SHAPE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECTANGLE_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECTANGLE_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -764,33 +836,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECTANGLE_FX__TRANSLATE_Z = SHAPE_FX__TRANSLATE_Z;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECTANGLE_FX__OPACITY = SHAPE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECTANGLE_FX__STYLE = SHAPE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECTANGLE_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -884,6 +929,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	int ARC_FX__NAME = SHAPE_FX__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_FX__OPACITY = SHAPE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_FX__STYLE = SHAPE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -945,33 +1026,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int ARC_FX__TRANSLATE_Z = SHAPE_FX__TRANSLATE_Z;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARC_FX__OPACITY = SHAPE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARC_FX__STYLE = SHAPE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int ARC_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1047,6 +1101,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	int CIRCLE_FX__NAME = SHAPE_FX__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CIRCLE_FX__OPACITY = SHAPE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CIRCLE_FX__STYLE = SHAPE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CIRCLE_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CIRCLE_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1108,33 +1198,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int CIRCLE_FX__TRANSLATE_Z = SHAPE_FX__TRANSLATE_Z;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CIRCLE_FX__OPACITY = SHAPE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CIRCLE_FX__STYLE = SHAPE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int CIRCLE_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1201,6 +1264,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	int POLYGON_FX__NAME = SHAPE_FX__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLYGON_FX__OPACITY = SHAPE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLYGON_FX__STYLE = SHAPE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLYGON_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLYGON_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1262,33 +1361,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int POLYGON_FX__TRANSLATE_Z = SHAPE_FX__TRANSLATE_Z;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POLYGON_FX__OPACITY = SHAPE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POLYGON_FX__STYLE = SHAPE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int POLYGON_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1355,6 +1427,42 @@ public interface PhotoShopFXPackage extends EPackage {
 	int TEXT_FX__NAME = SHAPE_FX__NAME;
 
 	/**
+	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FX__OPACITY = SHAPE_FX__OPACITY;
+
+	/**
+	 * The feature id for the '<em><b>Style</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FX__STYLE = SHAPE_FX__STYLE;
+
+	/**
+	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1416,33 +1524,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_FX__TRANSLATE_Z = SHAPE_FX__TRANSLATE_Z;
-
-	/**
-	 * The feature id for the '<em><b>Opacity</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_FX__OPACITY = SHAPE_FX__OPACITY;
-
-	/**
-	 * The feature id for the '<em><b>Style</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_FX__STYLE = SHAPE_FX__STYLE;
-
-	/**
-	 * The feature id for the '<em><b>Style Class</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TEXT_FX__STYLE_CLASS = SHAPE_FX__STYLE_CLASS;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -1532,6 +1613,50 @@ public interface PhotoShopFXPackage extends EPackage {
 	EAttribute getNodeFX_Name();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getOpacity <em>Opacity</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Opacity</em>'.
+	 * @see de.dc.javafx.photoshop.model.NodeFX#getOpacity()
+	 * @see #getNodeFX()
+	 * @generated
+	 */
+	EAttribute getNodeFX_Opacity();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getStyle <em>Style</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style</em>'.
+	 * @see de.dc.javafx.photoshop.model.NodeFX#getStyle()
+	 * @see #getNodeFX()
+	 * @generated
+	 */
+	EAttribute getNodeFX_Style();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getStyleClass <em>Style Class</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Style Class</em>'.
+	 * @see de.dc.javafx.photoshop.model.NodeFX#getStyleClass()
+	 * @see #getNodeFX()
+	 * @generated
+	 */
+	EAttribute getNodeFX_StyleClass();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getStrokeWidth <em>Stroke Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Stroke Width</em>'.
+	 * @see de.dc.javafx.photoshop.model.NodeFX#getStrokeWidth()
+	 * @see #getNodeFX()
+	 * @generated
+	 */
+	EAttribute getNodeFX_StrokeWidth();
+
+	/**
 	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getRotate <em>Rotate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1607,39 +1732,6 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNodeFX_TranslateZ();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getOpacity <em>Opacity</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Opacity</em>'.
-	 * @see de.dc.javafx.photoshop.model.NodeFX#getOpacity()
-	 * @see #getNodeFX()
-	 * @generated
-	 */
-	EAttribute getNodeFX_Opacity();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getStyle <em>Style</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style</em>'.
-	 * @see de.dc.javafx.photoshop.model.NodeFX#getStyle()
-	 * @see #getNodeFX()
-	 * @generated
-	 */
-	EAttribute getNodeFX_Style();
-
-	/**
-	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getStyleClass <em>Style Class</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Style Class</em>'.
-	 * @see de.dc.javafx.photoshop.model.NodeFX#getStyleClass()
-	 * @see #getNodeFX()
-	 * @generated
-	 */
-	EAttribute getNodeFX_StyleClass();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#isVisible <em>Visible</em>}'.
@@ -1935,6 +2027,38 @@ public interface PhotoShopFXPackage extends EPackage {
 		EAttribute NODE_FX__NAME = eINSTANCE.getNodeFX_Name();
 
 		/**
+		 * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_FX__OPACITY = eINSTANCE.getNodeFX_Opacity();
+
+		/**
+		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_FX__STYLE = eINSTANCE.getNodeFX_Style();
+
+		/**
+		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_FX__STYLE_CLASS = eINSTANCE.getNodeFX_StyleClass();
+
+		/**
+		 * The meta object literal for the '<em><b>Stroke Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_FX__STROKE_WIDTH = eINSTANCE.getNodeFX_StrokeWidth();
+
+		/**
 		 * The meta object literal for the '<em><b>Rotate</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1989,30 +2113,6 @@ public interface PhotoShopFXPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NODE_FX__TRANSLATE_Z = eINSTANCE.getNodeFX_TranslateZ();
-
-		/**
-		 * The meta object literal for the '<em><b>Opacity</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NODE_FX__OPACITY = eINSTANCE.getNodeFX_Opacity();
-
-		/**
-		 * The meta object literal for the '<em><b>Style</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NODE_FX__STYLE = eINSTANCE.getNodeFX_Style();
-
-		/**
-		 * The meta object literal for the '<em><b>Style Class</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute NODE_FX__STYLE_CLASS = eINSTANCE.getNodeFX_StyleClass();
 
 		/**
 		 * The meta object literal for the '<em><b>Visible</b></em>' attribute feature.
