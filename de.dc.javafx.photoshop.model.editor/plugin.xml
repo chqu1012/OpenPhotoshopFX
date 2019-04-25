@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension
+         point="org.eclipse.core.runtime.applications"
+         id="ModelEditorAdvisorApplication">
+      <!-- @generated photoshop -->
+      <application>
+         <run class="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisor$Application"/>
+      </application>
+   </extension>
+
+   <extension point="org.eclipse.ui.perspectives">
+      <!-- @generated photoshop -->
+      <perspective
+            name="%_UI_Perspective_label"
+            class="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisor$Perspective"
+            id="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorPerspective">
+      </perspective>
+   </extension>
+
+   <extension point="org.eclipse.ui.commands">
+      <!-- @generated photoshop -->
+      <command
+            name="%_UI_Menu_OpenURI_label"
+            description="%_UI_Menu_OpenURI_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenURICommand"/>
+      <command
+            name="%_UI_Menu_Open_label"
+            description="%_UI_Menu_Open_description"
+            categoryId="org.eclipse.ui.category.file"
+            id="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenCommand"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.bindings">
+      <!-- @generated photoshop -->
+      <key
+            commandId="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenURICommand"
+            sequence="M1+U"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+      <key
+            commandId="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenCommand"
+            sequence="M1+O"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"/>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated photoshop -->
+      <actionSet
+            label="%_UI_ModelEditorAdvisor_ActionSet_label"
+            visible="true"
+            id="ModelEditorAdvisorActionSet">
+         <action
+               label="%_UI_Menu_About_label"
+               class="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisor$AboutAction"
+               menubarPath="help/additions"
+               id="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorAboutAction"/>
+         <action
+               label="%_UI_Menu_OpenURI_label"
+               definitionId="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenURICommand"
+               class="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisor$OpenURIAction"
+               menubarPath="file/additions"
+               id="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenURIAction"/>
+         <action
+               label="%_UI_Menu_Open_label"
+               definitionId="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenCommand"
+               class="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisor$OpenAction"
+               menubarPath="file/additions"
+               id="de.dc.javafx.photoshop.model.presentation.ModelEditorAdvisorOpenAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.actionSets">
+      <!-- @generated photoshop -->
+      <actionSet
+            label="%_UI_PhotoShopFXModelWizard_ActionSet_label"
+            visible="true"
+            id="de.dc.javafx.photoshop.model.presentation.PhotoShopFXActionBarContributorActionSet">
+         <action
+               label="%_UI_PhotoShopFXModelWizard_label"
+               class="de.dc.javafx.photoshop.model.presentation.PhotoShopFXActionBarContributor$NewAction"
+               menubarPath="file/new/additions"
+               id="de.dc.javafx.photoshop.model.presentation.PhotoShopFXActionBarContributorNewAction"/>
+      </actionSet>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated photoshop -->
+      <editor
+            id="de.dc.javafx.photoshop.model.presentation.PhotoShopFXEditorID"
+            name="%_UI_PhotoShopFXEditor_label"
+            icon="icons/full/obj16/PhotoShopFXModelFile.gif"
+            extensions="psfx"
+            class="de.dc.javafx.photoshop.model.presentation.PhotoShopFXEditor"
+            contributorClass="de.dc.javafx.photoshop.model.presentation.PhotoShopFXActionBarContributor">
+      </editor>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="de.dc.javafx.photoshop.model.editor.PhotoShopFXPreview"
+            id="de.dc.javafx.photoshop.model.editor.preview"
+            name="PhotoShopFX Preview"
+            restorable="true">
+      </view>
+   </extension>
+
+</plugin>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<psfx:PhotoShopFX xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:psfx="http://www.frater-anatis.org/javafx">
+  <nodes xsi:type="psfx:LineFX">
+    <position/>
+    <endPosition x="300.0" y="300.0"/>
+  </nodes>
+</psfx:PhotoShopFX>

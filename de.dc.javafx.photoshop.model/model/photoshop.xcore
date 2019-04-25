@@ -1,0 +1,76 @@
+@Ecore(
+	name="psfx",
+	nsURI="http://www.frater-anatis.org/javafx",
+	nsPrefix="psfx"
+)
+@GenModel(
+    multipleEditorPages="false", 
+    creationIcons="false", 
+	editDirectory="/de.dc.javafx.photoshop.model.edit/src-gen",
+	editorDirectory="/de.dc.javafx.photoshop.model.editor/src-gen", 
+	richClientPlatform="true", 
+	codeFormatting="true",
+	importerID="org.eclipse.emf.importer.ecore", 
+	runtimePlatform="RCP", 
+	prefix="PhotoShopFX", 
+	findAction="true", 
+	autoResizeProperties="true", 
+	creationSubmenus="true", 
+	fileExtensions="psfx" 
+)
+package de.dc.javafx.photoshop.model
+ 
+class PhotoShopFX{
+	contains NodeFX[0..*] nodes
+}
+
+abstract class NodeFX{
+	String name
+	double rotate
+	double scaleX
+	double scaleY
+	double scaleZ
+	double translateX
+	double translateY
+	double translateZ
+	double opacity = '1.0'
+	String style
+	String styleClass
+	boolean visible = 'true'
+}
+
+class PointFX extends NodeFX{
+	double x = '10'
+	double y = '10'
+}
+
+abstract class ShapeFX extends NodeFX{
+	contains PointFX position
+}
+
+
+class LineFX extends ShapeFX{
+	contains PointFX endPosition
+}
+
+class RectangleFX extends ShapeFX{
+	double width = '100'
+	double height = '100'
+}
+
+class ArcFX extends ShapeFX{
+	double radius
+	double startAngle
+}
+
+class CircleFX extends ShapeFX{
+	double radius
+}
+
+class PolygonFX extends ShapeFX{
+	contains PointFX[0..*] points
+}
+
+class TextFX extends ShapeFX{
+	String value
+}
