@@ -40,30 +40,44 @@ abstract class NodeFX{
 }
 
 class PointFX extends NodeFX{
+  @GenModel(propertyCategory="Details")
 	double x = '10'
+  @GenModel(propertyCategory="Details")
 	double y = '10'
 }
 
 abstract class ShapeFX extends NodeFX{
+ @GenModel(propertyCategory="Details")
 	contains PointFX position
 }
 
 
 class LineFX extends ShapeFX{
+ @GenModel(propertyCategory="Details")
 	contains PointFX endPosition
 }
 
 class RectangleFX extends ShapeFX{
+ @GenModel(propertyCategory="Details")
 	double width = '100'
+ @GenModel(propertyCategory="Details")
 	double height = '100'
+ @GenModel(propertyCategory="Details")
+	double arcWidth = '0'
+ @GenModel(propertyCategory="Details")
+	double arcHeight = '0'
+	
 }
 
 class ArcFX extends ShapeFX{
+ @GenModel(propertyCategory="Details")
 	double radius
+ @GenModel(propertyCategory="Details")
 	double startAngle
 }
 
 class CircleFX extends ShapeFX{
+ @GenModel(propertyCategory="Details")
 	double radius
 }
 
@@ -72,5 +86,6 @@ class PolygonFX extends ShapeFX{
 }
 
 class TextFX extends ShapeFX{
+ @GenModel(propertyCategory="Details")
 	String value
 }

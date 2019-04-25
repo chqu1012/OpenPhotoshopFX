@@ -423,6 +423,26 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 	 * @generated
 	 */
 	@Override
+	public EAttribute getRectangleFX_ArcWidth() {
+		return (EAttribute) rectangleFXEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getRectangleFX_ArcHeight() {
+		return (EAttribute) rectangleFXEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getArcFX() {
 		return arcFXEClass;
 	}
@@ -567,6 +587,8 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 		rectangleFXEClass = createEClass(RECTANGLE_FX);
 		createEAttribute(rectangleFXEClass, RECTANGLE_FX__WIDTH);
 		createEAttribute(rectangleFXEClass, RECTANGLE_FX__HEIGHT);
+		createEAttribute(rectangleFXEClass, RECTANGLE_FX__ARC_WIDTH);
+		createEAttribute(rectangleFXEClass, RECTANGLE_FX__ARC_HEIGHT);
 
 		arcFXEClass = createEClass(ARC_FX);
 		createEAttribute(arcFXEClass, ARC_FX__RADIUS);
@@ -691,6 +713,12 @@ public class PhotoShopFXPackageImpl extends EPackageImpl implements PhotoShopFXP
 		initEAttribute(getRectangleFX_Height(), theEcorePackage.getEDouble(), "height", "100", 0, 1, RectangleFX.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+		initEAttribute(getRectangleFX_ArcWidth(), theEcorePackage.getEDouble(), "arcWidth", "0", 0, 1,
+				RectangleFX.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRectangleFX_ArcHeight(), theEcorePackage.getEDouble(), "arcHeight", "0", 0, 1,
+				RectangleFX.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, !IS_UNIQUE,
+				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(arcFXEClass, ArcFX.class, "ArcFX", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArcFX_Radius(), theEcorePackage.getEDouble(), "radius", null, 0, 1, ArcFX.class,

@@ -27,6 +27,7 @@ public interface ShapeFX extends NodeFX {
 	 * @see #setPosition(PointFX)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getShapeFX_Position()
 	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	PointFX getPosition();

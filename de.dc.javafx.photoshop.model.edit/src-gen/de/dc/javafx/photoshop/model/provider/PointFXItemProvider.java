@@ -62,7 +62,7 @@ public class PointFXItemProvider extends NodeFXItemProvider {
 						getResourceLocator(), getString("_UI_PointFX_x_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_PointFX_x_feature", "_UI_PointFX_type"),
 						PhotoShopFXPackage.Literals.POINT_FX__X, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -77,7 +77,7 @@ public class PointFXItemProvider extends NodeFXItemProvider {
 						getResourceLocator(), getString("_UI_PointFX_y_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_PointFX_y_feature", "_UI_PointFX_type"),
 						PhotoShopFXPackage.Literals.POINT_FX__Y, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**

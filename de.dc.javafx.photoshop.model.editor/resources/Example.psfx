@@ -11,4 +11,7 @@
   <nodes xsi:type="psfx:CircleFX" radius="150.0">
     <position x="200.0" y="200.0"/>
   </nodes>
+  <nodes xsi:type="psfx:RectangleFX" arcWidth="20.0" arcHeight="20.0">
+    <position x="200.0"/>
+  </nodes>
 </psfx:PhotoShopFX>

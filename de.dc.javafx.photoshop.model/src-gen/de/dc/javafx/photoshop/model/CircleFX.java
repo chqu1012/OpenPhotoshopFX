@@ -27,6 +27,7 @@ public interface CircleFX extends ShapeFX {
 	 * @see #setRadius(double)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getCircleFX_Radius()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	double getRadius();

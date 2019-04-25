@@ -27,6 +27,7 @@ public interface TextFX extends ShapeFX {
 	 * @see #setValue(String)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getTextFX_Value()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	String getValue();

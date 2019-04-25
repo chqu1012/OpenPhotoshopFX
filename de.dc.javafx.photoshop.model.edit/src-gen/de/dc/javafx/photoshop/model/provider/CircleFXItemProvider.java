@@ -62,7 +62,7 @@ public class CircleFXItemProvider extends ShapeFXItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_CircleFX_radius_feature",
 								"_UI_CircleFX_type"),
 						PhotoShopFXPackage.Literals.CIRCLE_FX__RADIUS, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**

@@ -27,6 +27,7 @@ public interface LineFX extends ShapeFX {
 	 * @see #setEndPosition(PointFX)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getLineFX_EndPosition()
 	 * @model containment="true"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	PointFX getEndPosition();

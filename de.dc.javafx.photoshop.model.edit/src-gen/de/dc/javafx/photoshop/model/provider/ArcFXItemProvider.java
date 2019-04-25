@@ -62,7 +62,7 @@ public class ArcFXItemProvider extends ShapeFXItemProvider {
 						getResourceLocator(), getString("_UI_ArcFX_radius_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_ArcFX_radius_feature", "_UI_ArcFX_type"),
 						PhotoShopFXPackage.Literals.ARC_FX__RADIUS, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -78,7 +78,7 @@ public class ArcFXItemProvider extends ShapeFXItemProvider {
 						getString("_UI_PropertyDescriptor_description", "_UI_ArcFX_startAngle_feature",
 								"_UI_ArcFX_type"),
 						PhotoShopFXPackage.Literals.ARC_FX__START_ANGLE, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**

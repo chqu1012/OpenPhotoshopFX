@@ -21,6 +21,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.RectangleFXImpl#getWidth <em>Width</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.RectangleFXImpl#getHeight <em>Height</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.impl.RectangleFXImpl#getArcWidth <em>Arc Width</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.impl.RectangleFXImpl#getArcHeight <em>Arc Height</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +67,46 @@ public class RectangleFXImpl extends ShapeFXImpl implements RectangleFX {
 	 * @ordered
 	 */
 	protected double height = HEIGHT_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getArcWidth() <em>Arc Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArcWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double ARC_WIDTH_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getArcWidth() <em>Arc Width</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArcWidth()
+	 * @generated
+	 * @ordered
+	 */
+	protected double arcWidth = ARC_WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getArcHeight() <em>Arc Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArcHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double ARC_HEIGHT_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getArcHeight() <em>Arc Height</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getArcHeight()
+	 * @generated
+	 * @ordered
+	 */
+	protected double arcHeight = ARC_HEIGHT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -139,12 +181,64 @@ public class RectangleFXImpl extends ShapeFXImpl implements RectangleFX {
 	 * @generated
 	 */
 	@Override
+	public double getArcWidth() {
+		return arcWidth;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setArcWidth(double newArcWidth) {
+		double oldArcWidth = arcWidth;
+		arcWidth = newArcWidth;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.RECTANGLE_FX__ARC_WIDTH,
+					oldArcWidth, arcWidth));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public double getArcHeight() {
+		return arcHeight;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setArcHeight(double newArcHeight) {
+		double oldArcHeight = arcHeight;
+		arcHeight = newArcHeight;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.RECTANGLE_FX__ARC_HEIGHT,
+					oldArcHeight, arcHeight));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case PhotoShopFXPackage.RECTANGLE_FX__WIDTH:
 			return getWidth();
 		case PhotoShopFXPackage.RECTANGLE_FX__HEIGHT:
 			return getHeight();
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_WIDTH:
+			return getArcWidth();
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_HEIGHT:
+			return getArcHeight();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -162,6 +256,12 @@ public class RectangleFXImpl extends ShapeFXImpl implements RectangleFX {
 			return;
 		case PhotoShopFXPackage.RECTANGLE_FX__HEIGHT:
 			setHeight((Double) newValue);
+			return;
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_WIDTH:
+			setArcWidth((Double) newValue);
+			return;
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_HEIGHT:
+			setArcHeight((Double) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -181,6 +281,12 @@ public class RectangleFXImpl extends ShapeFXImpl implements RectangleFX {
 		case PhotoShopFXPackage.RECTANGLE_FX__HEIGHT:
 			setHeight(HEIGHT_EDEFAULT);
 			return;
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_WIDTH:
+			setArcWidth(ARC_WIDTH_EDEFAULT);
+			return;
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_HEIGHT:
+			setArcHeight(ARC_HEIGHT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -197,6 +303,10 @@ public class RectangleFXImpl extends ShapeFXImpl implements RectangleFX {
 			return width != WIDTH_EDEFAULT;
 		case PhotoShopFXPackage.RECTANGLE_FX__HEIGHT:
 			return height != HEIGHT_EDEFAULT;
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_WIDTH:
+			return arcWidth != ARC_WIDTH_EDEFAULT;
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_HEIGHT:
+			return arcHeight != ARC_HEIGHT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -216,6 +326,10 @@ public class RectangleFXImpl extends ShapeFXImpl implements RectangleFX {
 		result.append(width);
 		result.append(", height: ");
 		result.append(height);
+		result.append(", arcWidth: ");
+		result.append(arcWidth);
+		result.append(", arcHeight: ");
+		result.append(arcHeight);
 		result.append(')');
 		return result.toString();
 	}

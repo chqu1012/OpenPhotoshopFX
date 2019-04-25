@@ -61,7 +61,7 @@ public class TextFXItemProvider extends ShapeFXItemProvider {
 						getResourceLocator(), getString("_UI_TextFX_value_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_TextFX_value_feature", "_UI_TextFX_type"),
 						PhotoShopFXPackage.Literals.TEXT_FX__VALUE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**

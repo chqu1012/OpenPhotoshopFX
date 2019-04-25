@@ -28,6 +28,7 @@ public interface ArcFX extends ShapeFX {
 	 * @see #setRadius(double)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getArcFX_Radius()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	double getRadius();
@@ -50,6 +51,7 @@ public interface ArcFX extends ShapeFX {
 	 * @see #setStartAngle(double)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getArcFX_StartAngle()
 	 * @model unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	double getStartAngle();

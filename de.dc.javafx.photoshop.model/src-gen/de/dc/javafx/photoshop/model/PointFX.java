@@ -29,6 +29,7 @@ public interface PointFX extends NodeFX {
 	 * @see #setX(double)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getPointFX_X()
 	 * @model default="10" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	double getX();
@@ -52,6 +53,7 @@ public interface PointFX extends NodeFX {
 	 * @see #setY(double)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getPointFX_Y()
 	 * @model default="10" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
 	double getY();

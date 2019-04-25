@@ -829,13 +829,31 @@ public interface PhotoShopFXPackage extends EPackage {
 	int RECTANGLE_FX__HEIGHT = SHAPE_FX_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Arc Width</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECTANGLE_FX__ARC_WIDTH = SHAPE_FX_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Arc Height</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECTANGLE_FX__ARC_HEIGHT = SHAPE_FX_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Rectangle FX</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RECTANGLE_FX_FEATURE_COUNT = SHAPE_FX_FEATURE_COUNT + 2;
+	int RECTANGLE_FX_FEATURE_COUNT = SHAPE_FX_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Rectangle FX</em>' class.
@@ -1741,6 +1759,28 @@ public interface PhotoShopFXPackage extends EPackage {
 	EAttribute getRectangleFX_Height();
 
 	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.RectangleFX#getArcWidth <em>Arc Width</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Arc Width</em>'.
+	 * @see de.dc.javafx.photoshop.model.RectangleFX#getArcWidth()
+	 * @see #getRectangleFX()
+	 * @generated
+	 */
+	EAttribute getRectangleFX_ArcWidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.RectangleFX#getArcHeight <em>Arc Height</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Arc Height</em>'.
+	 * @see de.dc.javafx.photoshop.model.RectangleFX#getArcHeight()
+	 * @see #getRectangleFX()
+	 * @generated
+	 */
+	EAttribute getRectangleFX_ArcHeight();
+
+	/**
 	 * Returns the meta object for class '{@link de.dc.javafx.photoshop.model.ArcFX <em>Arc FX</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -2069,6 +2109,22 @@ public interface PhotoShopFXPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RECTANGLE_FX__HEIGHT = eINSTANCE.getRectangleFX_Height();
+
+		/**
+		 * The meta object literal for the '<em><b>Arc Width</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECTANGLE_FX__ARC_WIDTH = eINSTANCE.getRectangleFX_ArcWidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Arc Height</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECTANGLE_FX__ARC_HEIGHT = eINSTANCE.getRectangleFX_ArcHeight();
 
 		/**
 		 * The meta object literal for the '{@link de.dc.javafx.photoshop.model.impl.ArcFXImpl <em>Arc FX</em>}' class.

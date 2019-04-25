@@ -46,6 +46,8 @@ public class RectangleFXItemProvider extends ShapeFXItemProvider {
 
 			addWidthPropertyDescriptor(object);
 			addHeightPropertyDescriptor(object);
+			addArcWidthPropertyDescriptor(object);
+			addArcHeightPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -57,13 +59,13 @@ public class RectangleFXItemProvider extends ShapeFXItemProvider {
 	 * @generated
 	 */
 	protected void addWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_RectangleFX_width_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_RectangleFX_width_feature",
-								"_UI_RectangleFX_type"),
-						PhotoShopFXPackage.Literals.RECTANGLE_FX__WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_RectangleFX_width_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_RectangleFX_width_feature",
+						"_UI_RectangleFX_type"),
+				PhotoShopFXPackage.Literals.RECTANGLE_FX__WIDTH, true, false, false,
+				ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -73,13 +75,45 @@ public class RectangleFXItemProvider extends ShapeFXItemProvider {
 	 * @generated
 	 */
 	protected void addHeightPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_RectangleFX_height_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_RectangleFX_height_feature",
-								"_UI_RectangleFX_type"),
-						PhotoShopFXPackage.Literals.RECTANGLE_FX__HEIGHT, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_RectangleFX_height_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_RectangleFX_height_feature",
+						"_UI_RectangleFX_type"),
+				PhotoShopFXPackage.Literals.RECTANGLE_FX__HEIGHT, true, false, false,
+				ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Arc Width feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArcWidthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_RectangleFX_arcWidth_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_RectangleFX_arcWidth_feature",
+						"_UI_RectangleFX_type"),
+				PhotoShopFXPackage.Literals.RECTANGLE_FX__ARC_WIDTH, true, false, false,
+				ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Arc Height feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArcHeightPropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_RectangleFX_arcHeight_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_RectangleFX_arcHeight_feature",
+						"_UI_RectangleFX_type"),
+				PhotoShopFXPackage.Literals.RECTANGLE_FX__ARC_HEIGHT, true, false, false,
+				ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
 	/**
@@ -130,6 +164,8 @@ public class RectangleFXItemProvider extends ShapeFXItemProvider {
 		switch (notification.getFeatureID(RectangleFX.class)) {
 		case PhotoShopFXPackage.RECTANGLE_FX__WIDTH:
 		case PhotoShopFXPackage.RECTANGLE_FX__HEIGHT:
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_WIDTH:
+		case PhotoShopFXPackage.RECTANGLE_FX__ARC_HEIGHT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
