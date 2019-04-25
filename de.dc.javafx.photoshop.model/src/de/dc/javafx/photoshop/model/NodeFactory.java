@@ -5,6 +5,7 @@ import javafx.scene.Node;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 
 public class NodeFactory extends PhotoShopFXSwitch<Node> {
@@ -39,5 +40,15 @@ public class NodeFactory extends PhotoShopFXSwitch<Node> {
 		rectangle.setArcWidth(object.getArcWidth());
 		rectangle.setArcHeight(object.getArcHeight());  
 		return rectangle;
+	}
+	
+	@Override
+	public Node casePolygonFX(PolygonFX object) {
+		Polygon polygon = new Polygon();  
+		object.getPoints().stream().forEach(p->{
+			 polygon.getPoints().add(p.getX());
+			 polygon.getPoints().add(p.getY());
+		});
+		return polygon;
 	}
 }
