@@ -37,7 +37,7 @@ public class NodeFactory extends PhotoShopFXSwitch<Node> {
 
 	@Override
 	public Node caseRectangleFX(RectangleFX object) {
-		Rectangle node = new Rectangle();
+		ExtRectangleFX node = new ExtRectangleFX();
 		node.setX(object.getPosition().getX());
 		node.setY(object.getPosition().getY());
 		node.setWidth(object.getWidth());

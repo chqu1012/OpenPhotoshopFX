@@ -37,19 +37,18 @@ public class PhotoShopFXPreview extends ViewPart implements ISelectionListener {
 
 	@Override
 	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
+		pane.getChildren().clear();
 		if (selection instanceof IStructuredSelection) {
 			IStructuredSelection ss = (IStructuredSelection) selection;
 			if (ss.getFirstElement() instanceof NodeFX) {
 				NodeFX o = (NodeFX) ss.getFirstElement();
 				Node node = factory.doSwitch(o);
-				pane.getChildren().clear();
 				if (node!=null) {
 					pane.getChildren().add(node);
 				}
 			}else if (ss.getFirstElement() instanceof PhotoShopFX) {
 				PhotoShopFX o = (PhotoShopFX) ss.getFirstElement();
 				Node node = factory.doSwitch(o);
-				pane.getChildren().clear();
 				if (node!=null) {
 					pane.getChildren().add(node);
 				}
