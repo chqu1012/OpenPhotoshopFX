@@ -11,6 +11,7 @@ import org.eclipse.ui.part.ViewPart;
 
 import de.dc.javafx.photoshop.model.NodeFX;
 import de.dc.javafx.photoshop.model.NodeFactory;
+import de.dc.javafx.photoshop.model.PhotoShopFX;
 import javafx.embed.swt.FXCanvas;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -40,10 +41,19 @@ public class PhotoShopFXPreview extends ViewPart implements ISelectionListener {
 		if (selection instanceof IStructuredSelection) {
 			IStructuredSelection ss = (IStructuredSelection) selection;
 			if (ss.getFirstElement() instanceof NodeFX) {
-				pane.getChildren().clear();
 				NodeFX o = (NodeFX) ss.getFirstElement();
 				Node node = factory.doSwitch(o);
-				pane.getChildren().add(node);
+				pane.getChildren().clear();
+				if (node!=null) {
+					pane.getChildren().add(node);
+				}
+			}else if (ss.getFirstElement() instanceof PhotoShopFX) {
+				PhotoShopFX o = (PhotoShopFX) ss.getFirstElement();
+				Node node = factory.doSwitch(o);
+				pane.getChildren().clear();
+				if (node!=null) {
+					pane.getChildren().add(node);
+				}
 			}
 	    }
 	}
