@@ -1,5 +1,6 @@
 package de.dc.javafx.photoshop.model.editor;
 
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.jface.viewers.ISelection;
 import org.eclipse.jface.viewers.IStructuredSelection;
 import org.eclipse.swt.SWT;
@@ -20,13 +21,12 @@ import javafx.scene.layout.Pane;
 public class PhotoShopFXPreview extends ViewPart implements ISelectionListener {
 
 	private FXCanvas fxCanvas;
-	private Pane pane = new Pane();
 	private NodeFactory factory = new NodeFactory();
 	
 	@Override
 	public void createPartControl(Composite parent) {
 		fxCanvas = new FXCanvas(parent, SWT.NONE);
-		fxCanvas.setScene(new Scene(pane));
+		fxCanvas.setScene(new Scene(new Pane()));
 		PlatformUI.getWorkbench().getActiveWorkbenchWindow().getSelectionService().addSelectionListener(this);
 	}
 
@@ -37,22 +37,17 @@ public class PhotoShopFXPreview extends ViewPart implements ISelectionListener {
 
 	@Override
 	public void selectionChanged(IWorkbenchPart part, ISelection selection) {
-		pane.getChildren().clear();
 		if (selection instanceof IStructuredSelection) {
+			Pane pane = new Pane();
 			IStructuredSelection ss = (IStructuredSelection) selection;
+			Node node = new Pane();
 			if (ss.getFirstElement() instanceof NodeFX) {
-				NodeFX o = (NodeFX) ss.getFirstElement();
-				Node node = factory.doSwitch(o);
-				if (node!=null) {
-					pane.getChildren().add(node);
-				}
+				node = factory.doSwitch((EObject) ss.getFirstElement());
 			}else if (ss.getFirstElement() instanceof PhotoShopFX) {
-				PhotoShopFX o = (PhotoShopFX) ss.getFirstElement();
-				Node node = factory.doSwitch(o);
-				if (node!=null) {
-					pane.getChildren().add(node);
-				}
+				node = factory.doSwitch((EObject) ss.getFirstElement());
 			}
+			pane.getChildren().add(node);
+			fxCanvas.setScene(new Scene(pane));
 	    }
 	}
 
