@@ -29,21 +29,14 @@ public class NodeFactory extends PhotoShopFXSwitch<Node> {
 
 	@Override
 	public Node caseCircleFX(CircleFX object) {
-		PointFX pos = object.getPosition();
-		Circle node = new Circle(pos.getX(), pos.getY(), object.getRadius());
+		ExtCircleFX node = new ExtCircleFX(object);
 		initNode(node, object);
 		return node;
 	}
 
 	@Override
 	public Node caseRectangleFX(RectangleFX object) {
-		ExtRectangleFX node = new ExtRectangleFX();
-		node.setX(object.getPosition().getX());
-		node.setY(object.getPosition().getY());
-		node.setWidth(object.getWidth());
-		node.setHeight(object.getHeight());
-		node.setArcWidth(object.getArcWidth());
-		node.setArcHeight(object.getArcHeight());  
+		ExtRectangleFX node = new ExtRectangleFX(object);
 		initNode(node, object);
 		return node;
 	}

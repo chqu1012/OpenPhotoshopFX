@@ -22,14 +22,19 @@ public class ExtRectangleFX extends Rectangle {
 	private Point delta = new Point();
 	private BooleanProperty selectionProperty = new SimpleBooleanProperty(false);
 	private double handleRadius = 5;
+	protected RectangleFX model;
 	
 	public ExtRectangleFX() {
 		super(10, 10, Color.TRANSPARENT);
+	    init();
+	}
+
+	private void init() {
 		setFill(Color.web("BLUE", 0.2));
 	    setStroke(Color.BLUE);
 	    setStrokeWidth(2);
 	    
-	    setOnMousePressed(mouseEvent -> {
+		setOnMousePressed(mouseEvent -> {
 	    	delta.setX(getX() - mouseEvent.getSceneX());
 			delta.setY(getY() - mouseEvent.getSceneY());
 		});
@@ -151,6 +156,17 @@ public class ExtRectangleFX extends Rectangle {
 		strokeProperty().bind(borderBinding);
 	}
 	
+	public ExtRectangleFX(RectangleFX model) {
+		this.model = model;
+		init();
+		setX(model.getPosition().getX());
+		setY(model.getPosition().getY());
+		setWidth(model.getWidth());
+		setHeight(model.getHeight());
+		setArcWidth(model.getArcWidth());
+		setArcHeight(model.getArcHeight());  
+	}
+
 	private Circle createCircle(DoubleBinding xBinding, DoubleBinding yBinding) {
         Circle circle = new Circle(handleRadius, Color.RED);
         circle.centerXProperty().bind(xBinding);
