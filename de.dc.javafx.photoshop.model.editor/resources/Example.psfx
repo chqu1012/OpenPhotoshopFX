@@ -4,14 +4,17 @@
     <position/>
     <endPosition x="700.0" y="300.0"/>
   </nodes>
+  <nodes xsi:type="psfx:CircleFX" opacity="0.2" strokeColor="BLUE" radius="150.0">
+    <position x="650.0" y="200.0"/>
+  </nodes>
   <nodes xsi:type="psfx:CircleFX" strokeColor="BLUE" radius="150.0">
-    <position x="200.0" y="200.0"/>
+    <position x="800.0" y="200.0"/>
   </nodes>
   <nodes xsi:type="psfx:RectangleFX" strokeWidth="5.0" strokeColor="Green" arcWidth="20.0" arcHeight="20.0">
-    <position x="200.0"/>
+    <position x="200.0" y="300.0"/>
   </nodes>
   <nodes xsi:type="psfx:RectangleFX" arcWidth="20.0" arcHeight="20.0">
-    <position x="200.0"/>
+    <position x="300.0" y="500.0"/>
   </nodes>
   <nodes xsi:type="psfx:PolygonFX">
     <position x="200.0" y="50.0"/>

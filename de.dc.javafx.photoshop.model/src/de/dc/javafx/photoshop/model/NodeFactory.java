@@ -61,9 +61,8 @@ public class NodeFactory extends PhotoShopFXSwitch<Node> {
 //			String style
 //		  @GenModel(propertyCategory="Details")
 //			String styleClass
-//		  @GenModel(propertyCategory="Details")
-//			double strokeWidth
-		
+
+		node.setOpacity(fx.getOpacity());
 		node.setStroke(Color.web(fx.getStrokeColor()));
 		node.setStrokeWidth(fx.getStrokeWidth());
 	}
