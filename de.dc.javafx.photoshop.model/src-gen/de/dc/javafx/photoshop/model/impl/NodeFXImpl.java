@@ -25,6 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStyle <em>Style</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStrokeWidth <em>Stroke Width</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getStrokeColor <em>Stroke Color</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getRotate <em>Rotate</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getScaleX <em>Scale X</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.impl.NodeFXImpl#getScaleY <em>Scale Y</em>}</li>
@@ -126,7 +127,7 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 * @ordered
 	 */
-	protected static final double STROKE_WIDTH_EDEFAULT = 1.0;
+	protected static final double STROKE_WIDTH_EDEFAULT = 2.0;
 
 	/**
 	 * The cached value of the '{@link #getStrokeWidth() <em>Stroke Width</em>}' attribute.
@@ -137,6 +138,26 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected double strokeWidth = STROKE_WIDTH_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getStrokeColor() <em>Stroke Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStrokeColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String STROKE_COLOR_EDEFAULT = "GRAY";
+
+	/**
+	 * The cached value of the '{@link #getStrokeColor() <em>Stroke Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getStrokeColor()
+	 * @generated
+	 * @ordered
+	 */
+	protected String strokeColor = STROKE_COLOR_EDEFAULT;
 
 	/**
 	 * The default value of the '{@link #getRotate() <em>Rotate</em>}' attribute.
@@ -441,6 +462,30 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 	 * @generated
 	 */
 	@Override
+	public String getStrokeColor() {
+		return strokeColor;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setStrokeColor(String newStrokeColor) {
+		String oldStrokeColor = strokeColor;
+		strokeColor = newStrokeColor;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PhotoShopFXPackage.NODE_FX__STROKE_COLOR,
+					oldStrokeColor, strokeColor));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public double getRotate() {
 		return rotate;
 	}
@@ -645,6 +690,8 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 			return getStyleClass();
 		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
 			return getStrokeWidth();
+		case PhotoShopFXPackage.NODE_FX__STROKE_COLOR:
+			return getStrokeColor();
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			return getRotate();
 		case PhotoShopFXPackage.NODE_FX__SCALE_X:
@@ -687,6 +734,9 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 			return;
 		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
 			setStrokeWidth((Double) newValue);
+			return;
+		case PhotoShopFXPackage.NODE_FX__STROKE_COLOR:
+			setStrokeColor((String) newValue);
 			return;
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			setRotate((Double) newValue);
@@ -739,6 +789,9 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
 			setStrokeWidth(STROKE_WIDTH_EDEFAULT);
 			return;
+		case PhotoShopFXPackage.NODE_FX__STROKE_COLOR:
+			setStrokeColor(STROKE_COLOR_EDEFAULT);
+			return;
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			setRotate(ROTATE_EDEFAULT);
 			return;
@@ -785,6 +838,8 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 			return STYLE_CLASS_EDEFAULT == null ? styleClass != null : !STYLE_CLASS_EDEFAULT.equals(styleClass);
 		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
 			return strokeWidth != STROKE_WIDTH_EDEFAULT;
+		case PhotoShopFXPackage.NODE_FX__STROKE_COLOR:
+			return STROKE_COLOR_EDEFAULT == null ? strokeColor != null : !STROKE_COLOR_EDEFAULT.equals(strokeColor);
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 			return rotate != ROTATE_EDEFAULT;
 		case PhotoShopFXPackage.NODE_FX__SCALE_X:
@@ -826,6 +881,8 @@ public abstract class NodeFXImpl extends MinimalEObjectImpl.Container implements
 		result.append(styleClass);
 		result.append(", strokeWidth: ");
 		result.append(strokeWidth);
+		result.append(", strokeColor: ");
+		result.append(strokeColor);
 		result.append(", rotate: ");
 		result.append(rotate);
 		result.append(", scaleX: ");

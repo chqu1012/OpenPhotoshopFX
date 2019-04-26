@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStyle <em>Style</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStyleClass <em>Style Class</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStrokeWidth <em>Stroke Width</em>}</li>
+ *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getStrokeColor <em>Stroke Color</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getRotate <em>Rotate</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getScaleX <em>Scale X</em>}</li>
  *   <li>{@link de.dc.javafx.photoshop.model.NodeFX#getScaleY <em>Scale Y</em>}</li>
@@ -128,13 +129,13 @@ public interface NodeFX extends EObject {
 
 	/**
 	 * Returns the value of the '<em><b>Stroke Width</b></em>' attribute.
-	 * The default value is <code>"1.0"</code>.
+	 * The default value is <code>"2.0"</code>.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Stroke Width</em>' attribute.
 	 * @see #setStrokeWidth(double)
 	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_StrokeWidth()
-	 * @model default="1.0" unique="false"
+	 * @model default="2.0" unique="false"
 	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
 	 * @generated
 	 */
@@ -149,6 +150,30 @@ public interface NodeFX extends EObject {
 	 * @generated
 	 */
 	void setStrokeWidth(double value);
+
+	/**
+	 * Returns the value of the '<em><b>Stroke Color</b></em>' attribute.
+	 * The default value is <code>"GRAY"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Stroke Color</em>' attribute.
+	 * @see #setStrokeColor(String)
+	 * @see de.dc.javafx.photoshop.model.PhotoShopFXPackage#getNodeFX_StrokeColor()
+	 * @model default="GRAY" unique="false"
+	 *        annotation="http://www.eclipse.org/emf/2002/GenModel propertyCategory='Details'"
+	 * @generated
+	 */
+	String getStrokeColor();
+
+	/**
+	 * Sets the value of the '{@link de.dc.javafx.photoshop.model.NodeFX#getStrokeColor <em>Stroke Color</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Stroke Color</em>' attribute.
+	 * @see #getStrokeColor()
+	 * @generated
+	 */
+	void setStrokeColor(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Rotate</b></em>' attribute.

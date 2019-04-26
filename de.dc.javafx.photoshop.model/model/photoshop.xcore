@@ -34,7 +34,9 @@ abstract class NodeFX{
   @GenModel(propertyCategory="Details")
 	String styleClass
   @GenModel(propertyCategory="Details")
-	double strokeWidth = '1.0'
+	double strokeWidth = '2.0'
+  @GenModel(propertyCategory="Details")
+	String strokeColor = 'GRAY'
 	double rotate
 	double scaleX
 	double scaleY

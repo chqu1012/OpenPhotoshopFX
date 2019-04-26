@@ -9,6 +9,7 @@ import javafx.beans.binding.ObjectBinding;
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.beans.property.SimpleDoubleProperty;
+import javafx.beans.value.ChangeListener;
 import javafx.geometry.Point2D;
 import javafx.scene.Cursor;
 import javafx.scene.Node;
@@ -56,7 +57,9 @@ public class ExtCircleFX extends Circle {
 			}
 		});
 
-		ObjectBinding<Color> borderBinding = Bindings.when(selectionProperty).then(Color.RED).otherwise(Color.BLUE);
-		strokeProperty().bind(borderBinding);
+		selectionProperty.addListener((ChangeListener<Boolean>) (observable, oldValue, newValue) -> {
+			Color color = newValue ? Color.RED :Color.web(model.getStrokeColor());
+			setStroke(color);
+		});
 	}
 }

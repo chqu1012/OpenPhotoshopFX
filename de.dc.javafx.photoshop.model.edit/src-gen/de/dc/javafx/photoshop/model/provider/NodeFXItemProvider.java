@@ -58,6 +58,7 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 			addStylePropertyDescriptor(object);
 			addStyleClassPropertyDescriptor(object);
 			addStrokeWidthPropertyDescriptor(object);
+			addStrokeColorPropertyDescriptor(object);
 			addRotatePropertyDescriptor(object);
 			addScaleXPropertyDescriptor(object);
 			addScaleYPropertyDescriptor(object);
@@ -82,6 +83,85 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 						getResourceLocator(), getString("_UI_NodeFX_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_name_feature", "_UI_NodeFX_type"),
 						PhotoShopFXPackage.Literals.NODE_FX__NAME, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Opacity feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addOpacityPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NodeFX_opacity_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_opacity_feature",
+								"_UI_NodeFX_type"),
+						PhotoShopFXPackage.Literals.NODE_FX__OPACITY, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Style feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStylePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NodeFX_style_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_style_feature", "_UI_NodeFX_type"),
+						PhotoShopFXPackage.Literals.NODE_FX__STYLE, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Style Class feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStyleClassPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NodeFX_styleClass_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_styleClass_feature",
+								"_UI_NodeFX_type"),
+						PhotoShopFXPackage.Literals.NODE_FX__STYLE_CLASS, true, false, false,
+						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Stroke Width feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStrokeWidthPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NodeFX_strokeWidth_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_strokeWidth_feature",
+								"_UI_NodeFX_type"),
+						PhotoShopFXPackage.Literals.NODE_FX__STROKE_WIDTH, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Stroke Color feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addStrokeColorPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_NodeFX_strokeColor_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_strokeColor_feature",
+								"_UI_NodeFX_type"),
+						PhotoShopFXPackage.Literals.NODE_FX__STROKE_COLOR, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
 	}
 
@@ -194,69 +274,6 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Opacity feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addOpacityPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_NodeFX_opacity_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_opacity_feature",
-								"_UI_NodeFX_type"),
-						PhotoShopFXPackage.Literals.NODE_FX__OPACITY, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStylePropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_NodeFX_style_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_style_feature", "_UI_NodeFX_type"),
-						PhotoShopFXPackage.Literals.NODE_FX__STYLE, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Style Class feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStyleClassPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_NodeFX_styleClass_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_styleClass_feature",
-								"_UI_NodeFX_type"),
-						PhotoShopFXPackage.Literals.NODE_FX__STYLE_CLASS, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Stroke Width feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addStrokeWidthPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_NodeFX_strokeWidth_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_NodeFX_strokeWidth_feature",
-								"_UI_NodeFX_type"),
-						PhotoShopFXPackage.Literals.NODE_FX__STROKE_WIDTH, true, false, false,
-						ItemPropertyDescriptor.REAL_VALUE_IMAGE, getString("_UI_DetailsPropertyCategory"), null));
-	}
-
-	/**
 	 * This adds a property descriptor for the Visible feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -312,6 +329,7 @@ public class NodeFXItemProvider extends ItemProviderAdapter implements IEditingD
 		case PhotoShopFXPackage.NODE_FX__STYLE:
 		case PhotoShopFXPackage.NODE_FX__STYLE_CLASS:
 		case PhotoShopFXPackage.NODE_FX__STROKE_WIDTH:
+		case PhotoShopFXPackage.NODE_FX__STROKE_COLOR:
 		case PhotoShopFXPackage.NODE_FX__ROTATE:
 		case PhotoShopFXPackage.NODE_FX__SCALE_X:
 		case PhotoShopFXPackage.NODE_FX__SCALE_Y:

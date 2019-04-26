@@ -3,6 +3,7 @@ package de.dc.javafx.photoshop.model;
 import de.dc.javafx.photoshop.model.util.PhotoShopFXSwitch;
 import javafx.scene.Node;
 import javafx.scene.layout.Pane;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Line;
 import javafx.scene.shape.Polygon;
@@ -63,6 +64,7 @@ public class NodeFactory extends PhotoShopFXSwitch<Node> {
 //		  @GenModel(propertyCategory="Details")
 //			double strokeWidth
 		
+		node.setStroke(Color.web(fx.getStrokeColor()));
 		node.setStrokeWidth(fx.getStrokeWidth());
 	}
 }

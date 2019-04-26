@@ -150,13 +150,22 @@ public interface PhotoShopFXPackage extends EPackage {
 	int NODE_FX__STROKE_WIDTH = 4;
 
 	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int NODE_FX__STROKE_COLOR = 5;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__ROTATE = 5;
+	int NODE_FX__ROTATE = 6;
 
 	/**
 	 * The feature id for the '<em><b>Scale X</b></em>' attribute.
@@ -165,7 +174,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__SCALE_X = 6;
+	int NODE_FX__SCALE_X = 7;
 
 	/**
 	 * The feature id for the '<em><b>Scale Y</b></em>' attribute.
@@ -174,7 +183,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__SCALE_Y = 7;
+	int NODE_FX__SCALE_Y = 8;
 
 	/**
 	 * The feature id for the '<em><b>Scale Z</b></em>' attribute.
@@ -183,7 +192,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__SCALE_Z = 8;
+	int NODE_FX__SCALE_Z = 9;
 
 	/**
 	 * The feature id for the '<em><b>Translate X</b></em>' attribute.
@@ -192,7 +201,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__TRANSLATE_X = 9;
+	int NODE_FX__TRANSLATE_X = 10;
 
 	/**
 	 * The feature id for the '<em><b>Translate Y</b></em>' attribute.
@@ -201,7 +210,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__TRANSLATE_Y = 10;
+	int NODE_FX__TRANSLATE_Y = 11;
 
 	/**
 	 * The feature id for the '<em><b>Translate Z</b></em>' attribute.
@@ -210,7 +219,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__TRANSLATE_Z = 11;
+	int NODE_FX__TRANSLATE_Z = 12;
 
 	/**
 	 * The feature id for the '<em><b>Visible</b></em>' attribute.
@@ -219,7 +228,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX__VISIBLE = 12;
+	int NODE_FX__VISIBLE = 13;
 
 	/**
 	 * The number of structural features of the '<em>Node FX</em>' class.
@@ -228,7 +237,7 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int NODE_FX_FEATURE_COUNT = 13;
+	int NODE_FX_FEATURE_COUNT = 14;
 
 	/**
 	 * The number of operations of the '<em>Node FX</em>' class.
@@ -293,6 +302,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int POINT_FX__STROKE_WIDTH = NODE_FX__STROKE_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POINT_FX__STROKE_COLOR = NODE_FX__STROKE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
@@ -458,6 +476,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	int SHAPE_FX__STROKE_WIDTH = NODE_FX__STROKE_WIDTH;
 
 	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int SHAPE_FX__STROKE_COLOR = NODE_FX__STROKE_COLOR;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -610,6 +637,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int LINE_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LINE_FX__STROKE_COLOR = SHAPE_FX__STROKE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
@@ -773,6 +809,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int RECTANGLE_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECTANGLE_FX__STROKE_COLOR = SHAPE_FX__STROKE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
@@ -965,6 +1010,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	int ARC_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
 
 	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_FX__STROKE_COLOR = SHAPE_FX__STROKE_COLOR;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1137,6 +1191,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	int CIRCLE_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
 
 	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CIRCLE_FX__STROKE_COLOR = SHAPE_FX__STROKE_COLOR;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1300,6 +1363,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	int POLYGON_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
 
 	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int POLYGON_FX__STROKE_COLOR = SHAPE_FX__STROKE_COLOR;
+
+	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1461,6 +1533,15 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @ordered
 	 */
 	int TEXT_FX__STROKE_WIDTH = SHAPE_FX__STROKE_WIDTH;
+
+	/**
+	 * The feature id for the '<em><b>Stroke Color</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEXT_FX__STROKE_COLOR = SHAPE_FX__STROKE_COLOR;
 
 	/**
 	 * The feature id for the '<em><b>Rotate</b></em>' attribute.
@@ -1655,6 +1736,17 @@ public interface PhotoShopFXPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getNodeFX_StrokeWidth();
+
+	/**
+	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getStrokeColor <em>Stroke Color</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Stroke Color</em>'.
+	 * @see de.dc.javafx.photoshop.model.NodeFX#getStrokeColor()
+	 * @see #getNodeFX()
+	 * @generated
+	 */
+	EAttribute getNodeFX_StrokeColor();
 
 	/**
 	 * Returns the meta object for the attribute '{@link de.dc.javafx.photoshop.model.NodeFX#getRotate <em>Rotate</em>}'.
@@ -2057,6 +2149,14 @@ public interface PhotoShopFXPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute NODE_FX__STROKE_WIDTH = eINSTANCE.getNodeFX_StrokeWidth();
+
+		/**
+		 * The meta object literal for the '<em><b>Stroke Color</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute NODE_FX__STROKE_COLOR = eINSTANCE.getNodeFX_StrokeColor();
 
 		/**
 		 * The meta object literal for the '<em><b>Rotate</b></em>' attribute feature.
